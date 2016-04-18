@@ -5,277 +5,390 @@
   src: url("../fonts/MinionProRegular.woff2") format("woff2");
   src: url("../fonts/MinionProRegular.woff") format("woff");
   src: url("../fonts/MinionProRegular.ttf") format("truetype");
-  src: url("../fonts/MinionProRegular.svg#MinionProRegular") format("svg");
-}
+  src: url("../fonts/MinionProRegular.svg#MinionProRegular") format("svg"); }
 
 body {
   font-family: "Raleway", sans-serif;
   font-size: 1em;
-  color: #444;
-}
+  color: #444; }
+  body .container {
+    width: 96%;
+    margin: 0 auto; }
+  body .clearfix:before, body .clearfix:after {
+    content: "";
+    display: table; }
+  body .clearfix:after {
+    clear: both; }
+  body a {
+    text-decoration: none;
+    color: #444; }
+  body h3 {
+    font-size: 1.5em;
+    font-weight: 700;
+    color: #444; }
+  body header {
+    text-align: center; }
+    body header .logo {
+      margin-top: 50px;
+      display: block; }
+      body header .logo img, body header .logo h1 {
+        display: inline-block; }
+      body header .logo img {
+        width: 67px;
+        height: auto;
+        vertical-align: bottom; }
+      body header .logo h1 {
+        font-size: 3em;
+        font-weight: 700;
+        margin: 0;
+        color: #2d2e4e; }
+    body header nav {
+      position: fixed;
+      width: 100%;
+      top: 0;
+      right: 0;
+      z-index: 2; }
+      body header nav .hamburger {
+        cursor: pointer;
+        padding: 10px 0 10px 10px;
+        background-color: #fff;
+        border-bottom: 1px solid #2d2e4e; }
+        body header nav .hamburger .line {
+          border-bottom: 4px solid #2d2e4e;
+          width: 35px;
+          margin-bottom: 6px; }
+        body header nav .hamburger .line:last-child {
+          margin-bottom: 0; }
+      body header nav .menu {
+        width: 100%;
+        text-align: center;
+        height: 0;
+        overflow: hidden;
+        transition: height .3s; }
+        body header nav .menu li a {
+          display: block;
+          padding: 10px 0;
+          background-color: #fff;
+          color: #444;
+          border-bottom: 1px solid #2d2e4e; }
+          body header nav .menu li a:hover {
+            background-color: #2d2e4e;
+            color: #fff; }
+      body header nav .open {
+        height: 200px; }
+  body main .phones {
+    max-width: 393px;
+    margin: 0  auto; }
+    body main .phones img {
+      width: 100%;
+      height: auto;
+      margin: 65px auto 0;
+      text-align: center; }
+  body main .text {
+    text-align: center;
+    margin-top: 50px; }
+    body main .text span, body main .text a {
+      display: block;
+      font-size: 1.5em;
+      line-height: 2em; }
+    body main .text a {
+      font-weight: 700; }
+  body main .about {
+    text-align: center;
+    background: url("../img/sleeping_woman.jpg");
+    background-size: cover;
+    margin-top: 35px; }
+    body main .about h3 {
+      padding: 40px 0; }
+    body main .about p {
+      text-align: justify;
+      display: block;
+      width: 90%;
+      margin: 0  auto; }
+    body main .about p:last-child {
+      margin-top: 40px;
+      padding-bottom: 40px; }
+  body main .benefits {
+    margin-top: 75px; }
+    body main .benefits h3 {
+      text-align: center; }
+    body main .benefits .benefits-more {
+      padding: 5px 10px 0;
+      margin: 0  auto;
+      background: #39bfeb;
+      width: 45px;
+      position: relative;
+      color: #fff;
+      cursor: pointer;
+      z-index: 1; }
+    body main .benefits .benefits-more::after {
+      content: "";
+      display: block;
+      height: 0;
+      border-top: 15px solid #39bfeb;
+      border-left: 32px solid transparent;
+      border-right: 32px solid transparent;
+      border-bottom: 0;
+      position: absolute;
+      bottom: -15px;
+      left: 0px; }
+    body main .benefits .benefits-block {
+      height: 0;
+      overflow: hidden;
+      transition: height .3s; }
+      body main .benefits .benefits-block ul {
+        width: 215px;
+        margin: 0  auto; }
+      body main .benefits .benefits-block a {
+        font-size: .8em;
+        display: block;
+        background: #fff;
+        padding: 5px 10px; }
+        body main .benefits .benefits-block a i, body main .benefits .benefits-block a span {
+          display: inline-block; }
+        body main .benefits .benefits-block a span {
+          text-align: justify; }
+        body main .benefits .benefits-block a i {
+          font-size: 30px;
+          width: 45px;
+          text-align: right;
+          margin-right: 12px; }
+      body main .benefits .benefits-block a:hover {
+        background: #39bfeb;
+        color: #fff;
+        position: relative; }
+      body main .benefits .benefits-block a:hover:after,
+      body main .benefits .benefits-block a:hover:before {
+        content: ' ';
+        display: block;
+        position: absolute;
+        height: 0;
+        border-top: 20px solid transparent;
+        border-bottom: 20px solid transparent; }
+      body main .benefits .benefits-block a:hover:after {
+        border-left: 25px solid #39bfeb;
+        border-right: 0;
+        top: 0;
+        right: -25px; }
+      body main .benefits .benefits-block a:hover:before {
+        border-right: 25px solid #39bfeb;
+        border-left: 0;
+        top: 0;
+        left: -25px; }
+      body main .benefits .benefits-block .big i {
+        vertical-align: top;
+        line-height: 45px; }
+      body main .benefits .benefits-block .big:hover:after,
+      body main .benefits .benefits-block .big:hover:before {
+        border-top: 27px solid transparent;
+        border-bottom: 27px solid transparent; }
+      body main .benefits .benefits-block .benefits-left li:first-child a {
+        margin-top: 20px; }
+    body main .benefits .benefits-open {
+      height: 362px; }
+  body main .img-phone {
+    max-width: 300px;
+    margin: 40px  auto 0; }
+    body main .img-phone img {
+      width: 100%;
+      height: auto; }
+  body main .users h3 {
+    text-align: center;
+    margin: 60px 0; }
+  body main .users article {
+    border: 2px solid #39bfeb;
+    box-shadow: 0 0 15px 0 #444;
+    position: relative;
+    width: 90%;
+    margin: 100px  auto 0;
+    text-align: left; }
+    body main .users article img {
+      width: 128px;
+      height: 128px;
+      border-radius: 50%;
+      border: 2px solid #39bfeb;
+      box-shadow: 0 0 15px 0 #444;
+      margin: 0;
+      position: absolute;
+      top: -64px;
+      right: 20px; }
+    body main .users article h4 {
+      font-size: 1.2em;
+      padding-top: 45px;
+      margin-left: 10px; }
+    body main .users article .stars {
+      margin-left: 10px;
+      color: #f5ca35; }
+    body main .users article p {
+      margin: 15px 10px 20px; }
+    body main .users article p:last-child {
+      margin-bottom: 0;
+      padding-bottom: 30px; }
+  body main .download h3 {
+    text-align: center;
+    margin: 60px 0 40px; }
+  body main .download .stores, body main .download .social {
+    text-align: center; }
+    body main .download .stores a, body main .download .social a {
+      display: block;
+      width: 150px;
+      display: inline-block;
+      margin: 5px; }
+      body main .download .stores a img, body main .download .social a img {
+        margin: 0;
+        width: 100%;
+        height: auto; }
+  body main .download .social {
+    margin-top: 40px; }
+    body main .download .social a {
+      width: 50px;
+      font-size: 2.75em;
+      color: #39bfeb; }
 
-body .container {
-  width: 96%;
-  margin: 0 auto;
-}
-
-body .clearfix:before, body .clearfix:after {
-  content: "";
-  display: table;
-}
-
-body .clearfix:after {
-  clear: both;
-}
-
-body a {
-  text-decoration: none;
-  color: #444;
-}
-
-body h3 {
-  font-size: 1.5em;
-  font-weight: 700;
-  color: #444;
-}
-
-body header {
-  text-align: center;
-}
-
-body header .logo {
-  margin-top: 50px;
-  display: block;
-}
-
-body header .logo img, body header .logo h1 {
-  display: inline-block;
-}
-
-body header .logo img {
-  width: 67px;
-  height: auto;
-  vertical-align: bottom;
-}
-
-body header .logo h1 {
-  font-size: 3em;
-  font-weight: 700;
-  margin: 0;
-  color: #2d2e4e;
-}
-
-body header nav {
-  position: fixed;
-  width: 100%;
-  top: 0;
-  right: 0;
-}
-
-body header nav .hamburger {
-  cursor: pointer;
-  padding: 10px 0 10px 10px;
-  background-color: #fff;
-  border-bottom: 1px solid #2d2e4e;
-}
-
-body header nav .hamburger .line {
-  border-bottom: 4px solid #2d2e4e;
-  width: 35px;
-  margin-bottom: 6px;
-}
-
-body header nav .hamburger .line:last-child {
-  margin-bottom: 0;
-}
-
-body header nav .menu {
-  width: 100%;
-  text-align: center;
-  height: 0;
-  overflow: hidden;
-  transition: height .3s;
-}
-
-body header nav .menu li a {
-  display: block;
-  padding: 10px 0;
-  background-color: #fff;
-  color: #444;
-  border-bottom: 1px solid #2d2e4e;
-}
-
-body header nav .menu li a:hover {
-  background-color: #2d2e4e;
-  color: #fff;
-}
-
-body header nav .open {
-  height: 200px;
-}
-
-body main section img {
-  width: 100%;
-  height: auto;
-  margin-top: 65px;
-}
-
-body main section .text {
-  text-align: center;
-  margin-top: 50px;
-}
-
-body main section .text span, body main section .text a {
-  display: block;
-  font-size: 1.5em;
-  line-height: 2em;
-}
-
-body main section .text a {
-  font-weight: 700;
-}
-
-body main section .about {
-  text-align: center;
-  background: url("../img/sleeping_woman.jpg");
-  background-size: cover;
-}
-
-body main section .about h3 {
-  padding: 40px 0;
-}
-
-body main section .about p {
-  text-align: justify;
-  display: block;
-  width: 90%;
-  margin: 0  auto;
-}
-
-body main section .about p:last-child {
-  margin-top: 40px;
-  padding-bottom: 40px;
-}
-
-body main section .benefits h3 {
-  text-align: center;
-}
-
-body main section .benefits .benefits-more {
-  padding: 5px 10px 0;
-  margin: 0  auto;
-  background: #39bfeb;
-  width: 45px;
-  position: relative;
-  color: #fff;
-  cursor: pointer;
-}
-
-body main section .benefits .benefits-more::after {
-  content: "";
-  display: block;
-  height: 0;
-  border-top: 15px solid #39bfeb;
-  border-left: 32px solid transparent;
-  border-right: 32px solid transparent;
-  border-bottom: 0;
-  position: absolute;
-  bottom: -15px;
-  left: 0px;
-}
-
-body main section .benefits .benefits-block {
-  height: 0;
-  overflow: hidden;
-  transition: height .3s;
-}
-
-body main section .benefits .benefits-block ul {
-  width: 215px;
-  margin: 0  auto;
-}
-
-body main section .benefits .benefits-block a {
-  font-size: .8em;
-  display: block;
-  background: #fff;
-  padding: 5px 10px;
-}
-
-body main section .benefits .benefits-block a i, body main section .benefits .benefits-block a span {
-  display: inline-block;
-}
-
-body main section .benefits .benefits-block a span {
-  text-align: justify;
-}
-
-body main section .benefits .benefits-block a i {
-  font-size: 30px;
-  margin-right: 7px;
-}
-
-body main section .benefits .benefits-block a:hover {
-  background: #39bfeb;
-  color: #fff;
-  position: relative;
-}
-
-body main section .benefits .benefits-block a:hover:after,
-body main section .benefits .benefits-block a:hover:before {
-  content: ' ';
-  display: block;
-  position: absolute;
-  height: 0;
-  border-top: 20px solid transparent;
-  border-bottom: 20px solid transparent;
-}
-
-body main section .benefits .benefits-block a:hover:after {
-  border-left: 25px solid #39bfeb;
-  border-right: 0;
-  top: 0;
-  right: -25px;
-}
-
-body main section .benefits .benefits-block a:hover:before {
-  border-right: 25px solid #39bfeb;
-  border-left: 0;
-  top: 0;
-  left: -25px;
-}
-
-body main section .benefits .benefits-block .big i {
-  vertical-align: top;
-  line-height: 45px;
-}
-
-body main section .benefits .benefits-block .big:hover:after,
-body main section .benefits .benefits-block .big:hover:before {
-  border-top: 27px solid transparent;
-  border-bottom: 27px solid transparent;
-}
-
-body main section .benefits .benefits-block .benefits-left li:first-child a {
-  margin-top: 20px;
-}
-
-body main section .benefits .benefits-open {
-  height: auto;
-}
-
-body main section .img-phone {
-  max-width: 500px;
-  margin: 0  auto;
-}
-
-body main section .img-phone img {
-  width: 100%;
-  height: auto;
-}
-
-@media screen and (min-width: 768px) {
-  header .logo {
+@media screen and (min-width: 785px) {
+  body header .logo {
     float: left;
-  }
-}
+    margin-top: 20px;
+    margin-left: 20px; }
+  body header nav {
+    position: static; }
+    body header nav .hamburger {
+      display: none; }
+    body header nav .menu {
+      overflow: visible;
+      height: auto;
+      width: auto;
+      float: right;
+      margin: 45px 0 0 0; }
+      body header nav .menu li {
+        display: inline-block; }
+        body header nav .menu li a {
+          border: 1px solid #444;
+          padding: 5px 5px; }
+        body header nav .menu li a:hover {
+          background: #444; }
+  body main .phones {
+    max-width: 593px; }
+    body main .phones img {
+      width: 100%; }
+  body main .benefits .benefits-more {
+    display: none; }
+  body main .benefits .benefits-block {
+    height: auto;
+    overflow: visible; }
+    body main .benefits .benefits-block .benefits-left {
+      float: left; }
+      body main .benefits .benefits-block .benefits-left li a {
+        margin-top: 20px;
+        margin-bottom: 60px; }
+      body main .benefits .benefits-block .benefits-left li a:before {
+        display: none; }
+    body main .benefits .benefits-block .benefits-right {
+      float: right; }
+      body main .benefits .benefits-block .benefits-right li a {
+        margin-top: 20px;
+        margin-bottom: 60px; }
+      body main .benefits .benefits-block .benefits-right li a:after {
+        display: none; }
+  body main .users {
+    text-align: center; }
+    body main .users article {
+      width: 360px;
+      display: inline-block;
+      margin-left: 10px; }
+  body main .download .stores a {
+    width: 218px; }
+  body main .download .social a {
+    font-size: 3.75em; } }
+
+@media screen and (min-width: 1170px) {
+  body {
+    width: 1170px;
+    margin: 0  auto; }
+    body header .logo {
+      margin: 46px 0 0 15px; }
+      body header .logo img {
+        width: 77px; }
+      body header .logo h1 {
+        margin-left: 17px;
+        font-size: 3.75em; }
+    body header nav .menu {
+      margin-top: 70px; }
+      body header nav .menu li a {
+        font-size: 1.6em; }
+    body main .phones {
+      max-width: 695px; }
+      body main .phones img {
+        margin-top: 96px; }
+    body main .text {
+      margin-top: 95px;
+      font-size: 33px; }
+      body main .text a, body main .text span {
+        line-height: 62px; }
+    body main .about h3 {
+      font-size: 48px;
+      margin-top: 90px; }
+    body main .about p {
+      width: 940px;
+      font-size: 24px; }
+    body main .about p:last-child {
+      margin-top: 29px; }
+    body main .benefits {
+      margin-top: 169px; }
+      body main .benefits h3 {
+        font-size: 48px; }
+      body main .benefits .benefits-block {
+        margin-top: 99px; }
+        body main .benefits .benefits-block a {
+          font-size: 16px;
+          font-weight: 700;
+          padding: 21px 0;
+          width: 230px; }
+          body main .benefits .benefits-block a i {
+            font-size: 43px;
+            margin-right: 14px; }
+        body main .benefits .benefits-block a:hover:after,
+        body main .benefits .benefits-block a:hover:before {
+          border-top: 43px solid transparent;
+          border-bottom: 42px solid transparent; }
+        body main .benefits .benefits-block a:hover:after {
+          border-left: 28px solid #39bfeb;
+          right: -28px; }
+        body main .benefits .benefits-block .big:hover:after,
+        body main .benefits .benefits-block .big:hover:before {
+          border-top: 49px solid transparent;
+          border-bottom: 50px solid transparent; }
+        body main .benefits .benefits-block .benefits-left li:first-child a {
+          margin-top: 13px; }
+        body main .benefits .benefits-block .benefits-right li a {
+          margin-top: 18px;
+          margin-bottom: 67px; }
+        body main .benefits .benefits-block .benefits-left li a {
+          margin-top: 71px; }
+      body main .benefits .img-phone {
+        margin-top: 139px;
+        max-width: 378px; }
+    body main .users h3 {
+      margin-top: 250px;
+      font-size: 48px; }
+    body main .users article {
+      width: 350px;
+      margin-right: 25px;
+      margin-left: 0;
+      text-align: left; }
+    body main .users article:last-child {
+      margin-right: 0; }
+    body main .download h3 {
+      margin-top: 118px;
+      font-size: 58px;
+      font-weight: 400; }
+    body main .download .stores {
+      margin-top: 121px; }
+      body main .download .stores a {
+        margin-right: 70px; }
+      body main .download .stores a:last-child {
+        margin-right: 0; }
+    body main .download .social a {
+      margin-top: 63px; } }
+
+/*# sourceMappingURL=style.css.map */
