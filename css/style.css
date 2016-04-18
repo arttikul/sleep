@@ -1,14 +1,281 @@
-body {
-  font: 100% Helvetica, sans-serif;
-  color: #02f;
-  line-height: 20px;
+@font-face {
+  font-family: 'MinionProRegular';
+  src: url("../fonts/MinionProRegular.eot");
+  src: url("../fonts/MinionProRegular.eot") format("embedded-opentype");
+  src: url("../fonts/MinionProRegular.woff2") format("woff2");
+  src: url("../fonts/MinionProRegular.woff") format("woff");
+  src: url("../fonts/MinionProRegular.ttf") format("truetype");
+  src: url("../fonts/MinionProRegular.svg#MinionProRegular") format("svg");
 }
 
-body div {
-  background-color: #02f;
-  width: 250px;
-  height: 250px;
-  border-radius: 50%;
-  float: right;
-  margin-right: 20px;
+body {
+  font-family: "Raleway", sans-serif;
+  font-size: 1em;
+  color: #444;
+}
+
+body .container {
+  width: 96%;
+  margin: 0 auto;
+}
+
+body .clearfix:before, body .clearfix:after {
+  content: "";
+  display: table;
+}
+
+body .clearfix:after {
+  clear: both;
+}
+
+body a {
+  text-decoration: none;
+  color: #444;
+}
+
+body h3 {
+  font-size: 1.5em;
+  font-weight: 700;
+  color: #444;
+}
+
+body header {
+  text-align: center;
+}
+
+body header .logo {
+  margin-top: 50px;
+  display: block;
+}
+
+body header .logo img, body header .logo h1 {
+  display: inline-block;
+}
+
+body header .logo img {
+  width: 67px;
+  height: auto;
+  vertical-align: bottom;
+}
+
+body header .logo h1 {
+  font-size: 3em;
+  font-weight: 700;
+  margin: 0;
+  color: #2d2e4e;
+}
+
+body header nav {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  right: 0;
+}
+
+body header nav .hamburger {
+  cursor: pointer;
+  padding: 10px 0 10px 10px;
+  background-color: #fff;
+  border-bottom: 1px solid #2d2e4e;
+}
+
+body header nav .hamburger .line {
+  border-bottom: 4px solid #2d2e4e;
+  width: 35px;
+  margin-bottom: 6px;
+}
+
+body header nav .hamburger .line:last-child {
+  margin-bottom: 0;
+}
+
+body header nav .menu {
+  width: 100%;
+  text-align: center;
+  height: 0;
+  overflow: hidden;
+  transition: height .3s;
+}
+
+body header nav .menu li a {
+  display: block;
+  padding: 10px 0;
+  background-color: #fff;
+  color: #444;
+  border-bottom: 1px solid #2d2e4e;
+}
+
+body header nav .menu li a:hover {
+  background-color: #2d2e4e;
+  color: #fff;
+}
+
+body header nav .open {
+  height: 200px;
+}
+
+body main section img {
+  width: 100%;
+  height: auto;
+  margin-top: 65px;
+}
+
+body main section .text {
+  text-align: center;
+  margin-top: 50px;
+}
+
+body main section .text span, body main section .text a {
+  display: block;
+  font-size: 1.5em;
+  line-height: 2em;
+}
+
+body main section .text a {
+  font-weight: 700;
+}
+
+body main section .about {
+  text-align: center;
+  background: url("../img/sleeping_woman.jpg");
+  background-size: cover;
+}
+
+body main section .about h3 {
+  padding: 40px 0;
+}
+
+body main section .about p {
+  text-align: justify;
+  display: block;
+  width: 90%;
+  margin: 0  auto;
+}
+
+body main section .about p:last-child {
+  margin-top: 40px;
+  padding-bottom: 40px;
+}
+
+body main section .benefits h3 {
+  text-align: center;
+}
+
+body main section .benefits .benefits-more {
+  padding: 5px 10px 0;
+  margin: 0  auto;
+  background: #39bfeb;
+  width: 45px;
+  position: relative;
+  color: #fff;
+  cursor: pointer;
+}
+
+body main section .benefits .benefits-more::after {
+  content: "";
+  display: block;
+  height: 0;
+  border-top: 15px solid #39bfeb;
+  border-left: 32px solid transparent;
+  border-right: 32px solid transparent;
+  border-bottom: 0;
+  position: absolute;
+  bottom: -15px;
+  left: 0px;
+}
+
+body main section .benefits .benefits-block {
+  height: 0;
+  overflow: hidden;
+  transition: height .3s;
+}
+
+body main section .benefits .benefits-block ul {
+  width: 215px;
+  margin: 0  auto;
+}
+
+body main section .benefits .benefits-block a {
+  font-size: .8em;
+  display: block;
+  background: #fff;
+  padding: 5px 10px;
+}
+
+body main section .benefits .benefits-block a i, body main section .benefits .benefits-block a span {
+  display: inline-block;
+}
+
+body main section .benefits .benefits-block a span {
+  text-align: justify;
+}
+
+body main section .benefits .benefits-block a i {
+  font-size: 30px;
+  margin-right: 7px;
+}
+
+body main section .benefits .benefits-block a:hover {
+  background: #39bfeb;
+  color: #fff;
+  position: relative;
+}
+
+body main section .benefits .benefits-block a:hover:after,
+body main section .benefits .benefits-block a:hover:before {
+  content: ' ';
+  display: block;
+  position: absolute;
+  height: 0;
+  border-top: 20px solid transparent;
+  border-bottom: 20px solid transparent;
+}
+
+body main section .benefits .benefits-block a:hover:after {
+  border-left: 25px solid #39bfeb;
+  border-right: 0;
+  top: 0;
+  right: -25px;
+}
+
+body main section .benefits .benefits-block a:hover:before {
+  border-right: 25px solid #39bfeb;
+  border-left: 0;
+  top: 0;
+  left: -25px;
+}
+
+body main section .benefits .benefits-block .big i {
+  vertical-align: top;
+  line-height: 45px;
+}
+
+body main section .benefits .benefits-block .big:hover:after,
+body main section .benefits .benefits-block .big:hover:before {
+  border-top: 27px solid transparent;
+  border-bottom: 27px solid transparent;
+}
+
+body main section .benefits .benefits-block .benefits-left li:first-child a {
+  margin-top: 20px;
+}
+
+body main section .benefits .benefits-open {
+  height: auto;
+}
+
+body main section .img-phone {
+  max-width: 500px;
+  margin: 0  auto;
+}
+
+body main section .img-phone img {
+  width: 100%;
+  height: auto;
+}
+
+@media screen and (min-width: 768px) {
+  header .logo {
+    float: left;
+  }
 }

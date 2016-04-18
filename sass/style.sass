@@ -1,14 +1,207 @@
-$font-stack:    Helvetica, sans-serif
-$primary-color: #02f
+@font-face
+    font-family: 'MinionProRegular'
+    src: url('../fonts/MinionProRegular.eot')
+    src: url('../fonts/MinionProRegular.eot') format('embedded-opentype')
+    src: url('../fonts/MinionProRegular.woff2') format('woff2')
+    src: url('../fonts/MinionProRegular.woff') format('woff')
+    src: url('../fonts/MinionProRegular.ttf') format('truetype')
+    src: url('../fonts/MinionProRegular.svg#MinionProRegular') format('svg')
+
+$font-main: 'Raleway', sans-serif
+$font-accent: 'MinionProRegular', serif
+$main-color: #444
+$accent-color: #2d2e4e
+$more-color: #39bfeb
+
 
 body
-  font: 100% $font-stack
-  color: $primary-color
-  line-height: 20px
-  div
-    background-color: $primary-color
-    width: 250px
-    height: 250px
-    border-radius: 50%
-    float: right
-    margin-right: 20px
+  font-family: $font-main
+  font-size: 1em
+  color: $main-color
+  .container
+    width: 96%
+    margin: 0 auto
+  .clearfix:before,.clearfix:after
+    content: ""
+    display: table
+  .clearfix:after
+    clear: both
+  a
+    text-decoration: none
+    color: $main-color
+  h3
+    font-size: 1.5em
+    font-weight: 700
+    color: $main-color
+  header
+    text-align: center
+    .logo
+      margin-top: 50px
+      display: block
+      img,h1
+        display: inline-block
+      img
+        width: 67px
+        height: auto
+        vertical-align: bottom
+      h1
+        font-size: 3em
+        font-weight: 700
+        margin: 0
+        color: #2d2e4e
+    nav
+      position: fixed
+      width: 100%
+      top: 0
+      right: 0
+      .hamburger
+        cursor: pointer
+        padding: 10px 0 10px 10px
+        background-color: #fff
+        border-bottom: 1px solid $accent-color
+        .line
+          border-bottom: 4px solid $accent-color
+          width: 35px
+          margin-bottom: 6px
+        .line:last-child
+          margin-bottom: 0
+      .menu
+        width: 100%
+        text-align: center
+        height: 0
+        overflow: hidden
+        transition: height .3s
+        li
+          a
+            display: block
+            padding: 10px 0
+            background-color: #fff
+            color: $main-color
+            border-bottom: 1px solid $accent-color
+            &:hover
+              background-color: $accent-color
+              color:#fff
+      .open
+        height: 200px
+  main
+    section
+      img
+        width: 100%
+        height: auto
+        margin-top: 65px
+      .text
+        text-align: center
+        margin-top: 50px
+        span,a
+          display: block
+          font-size: 1.5em
+          line-height: 2em
+        a
+          font-weight: 700
+      .about
+        text-align: center
+        background: url("../img/sleeping_woman.jpg")
+        background-size: cover
+        h3
+          padding: 40px 0
+        p
+          text-align: justify
+          display: block
+          width: 90%
+          margin: 0  auto
+        p:last-child
+          margin-top: 40px
+          padding-bottom: 40px
+      .benefits
+        h3
+          text-align: center
+        .benefits-more
+          padding: 5px 10px 0
+          margin: 0  auto
+          background: $more-color
+          width: 45px
+          position: relative
+          color: #fff
+          cursor: pointer
+        .benefits-more::after
+            content: ""
+            display: block
+            height: 0
+            border-top: 15px solid $more-color
+            border-left: 32px solid transparent
+            border-right: 32px solid transparent
+            border-bottom: 0
+            position: absolute
+            bottom: -15px
+            left: 0px
+        .benefits-block
+          height: 0
+          overflow: hidden
+          transition: height .3s
+          ul
+            width: 215px
+            margin: 0  auto
+            // text-align: center
+          a
+            font-size: .8em
+            display: block
+            background: #fff
+            padding: 5px 10px
+            i,span
+              display: inline-block
+            span
+              text-align: justify
+            i
+              font-size: 30px
+              margin-right: 7px
+          a:hover
+            background: $more-color
+            color: #fff
+            position: relative
+          a:hover:after,
+          a:hover:before
+            content: ' '
+            display: block
+            position: absolute
+            height: 0
+            border-top: 20px solid transparent
+            border-bottom: 20px solid transparent
+          a:hover:after
+            border-left: 25px solid $more-color
+            border-right: 0
+            top: 0
+            right: -25px
+          a:hover:before
+            border-right: 25px solid $more-color
+            border-left: 0
+            top: 0
+            left: -25px
+          .big
+            i
+              vertical-align: top
+              line-height: 45px
+          .big:hover:after,
+          .big:hover:before
+            border-top: 27px solid transparent
+            border-bottom: 27px solid transparent
+          .benefits-left
+            li:first-child a
+              margin-top: 20px
+        .benefits-open
+          height: auto
+      .img-phone
+        max-width: 500px
+        margin: 0  auto
+        img
+          width: 100%
+          height: auto
+
+
+
+
+
+@media screen and (min-width:768px)
+  header
+    .logo
+      float: left
+@media screen and (min-width:992px)
