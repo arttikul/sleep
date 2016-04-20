@@ -267,16 +267,20 @@ body
       border: 1px solid #efefef
       padding: 30px 5px 30px 5px
       box-shadow: 2px 2px 5px 0 #9e9e9e
+
       h3
         font-weight: 400
         font-size: 36px
         margin: 0 0 15px 25px
+
       .date-wrapper
         border-top: 2px dotted $blog-color
         border-bottom: 2px dotted $blog-color
         padding: 10px 0
+
         .date,
-        .social
+        .social,
+        .comment
           display: inline-block
           font-size: 24px
           color: $blog-color
@@ -284,13 +288,26 @@ body
           padding-right: 7px
           border-right: 1px solid $blog-color
           margin-left: 15px
+        .comment
+          font-family: $font-main
+          margin-left: 5px
+          padding-right: 8px
+          border-right: 1px solid $blog-color
+          color: $more-color
+          i
+            margin-right: 7px
+            color: $more-color
+
         .social
           margin-left: 7px
           a
             margin-right: 10px
             color: $blog-color
+          .blue
+            color: $more-color
       .post-content
         padding-top: 35px
+
         .post-img-phone
           margin: 0  auto
           min-width: 250px
@@ -327,6 +344,24 @@ body
       .disabled
         border-color: lighten($main-color, 50%)
         color: lighten($main-color, 50%)
+body
+  main
+    .opened-post
+      border: none
+      box-shadow: none
+      .opened
+        margin: 0
+        background: $more-color
+        text-align: center
+        padding: 8px
+        color: #fff
+      .opened-date-wrapper
+        border-top: none
+      .opened-post-content
+        border-bottom: 2px dotted $main-color
+        padding-bottom: 30px
+
+
 
 
 @media screen and (min-width:767px)
@@ -520,3 +555,5 @@ body
         .social
           a
             margin-top: 63px
+          // .blog
+          //   margin-top: 0
