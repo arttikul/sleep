@@ -38,7 +38,7 @@ body {
         height: auto;
         vertical-align: bottom; }
       body header .logo h1 {
-        font-size: 3em;
+        font-size: 2.5em;
         font-weight: 700;
         margin: 0;
         color: #2d2e4e; }
@@ -74,6 +74,9 @@ body {
           body header nav .menu li a:hover {
             background-color: #2d2e4e;
             color: #fff; }
+        body header nav .menu li .active {
+          background-color: #444;
+          color: #fff; }
       body header nav .open {
         height: 200px; }
   body main .phones {
@@ -244,8 +247,74 @@ body {
       width: 50px;
       font-size: 2.75em;
       color: #39bfeb; }
+  body main .post {
+    width: 94%;
+    margin: 40px  auto 20px;
+    border: 1px solid #efefef;
+    padding: 30px 5px 30px 5px;
+    box-shadow: 2px 2px 5px 0 #9e9e9e; }
+    body main .post h3 {
+      font-weight: 400;
+      font-size: 36px;
+      margin: 0 0 15px 25px; }
+    body main .post .date-wrapper {
+      border-top: 2px dotted #666;
+      border-bottom: 2px dotted #666;
+      padding: 10px 0; }
+      body main .post .date-wrapper .date,
+      body main .post .date-wrapper .social {
+        display: inline-block;
+        font-size: 24px;
+        color: #666; }
+      body main .post .date-wrapper .date {
+        padding-right: 7px;
+        border-right: 1px solid #666;
+        margin-left: 15px; }
+      body main .post .date-wrapper .social {
+        margin-left: 7px; }
+        body main .post .date-wrapper .social a {
+          margin-right: 10px;
+          color: #666; }
+    body main .post .post-content {
+      padding-top: 35px; }
+      body main .post .post-content .post-img-phone {
+        margin: 0  auto;
+        min-width: 250px;
+        max-width: 359px; }
+        body main .post .post-content .post-img-phone img {
+          width: 100%;
+          height: auto; }
+      body main .post .post-content .post-text {
+        font-size: 24px;
+        width: 90%;
+        margin: 0 20px 0 20px; }
+      body main .post .post-content .read-more {
+        box-sizing: border-box;
+        display: block;
+        width: 180px;
+        margin-left: 20px;
+        margin-top: 40px;
+        border: 1px solid #39bfeb;
+        color: #39bfeb;
+        font-size: 24px;
+        padding: 13px; }
+  body main .pagination {
+    text-align: center;
+    margin-top: 50px; }
+    body main .pagination a {
+      display: inline-block;
+      padding: 15px;
+      width: 45px;
+      font-size: 30px;
+      border: 1px solid #444; }
+    body main .pagination .page-active {
+      border-color: #39bfeb;
+      color: #39bfeb; }
+    body main .pagination .disabled {
+      border-color: #c4c4c4;
+      color: #c4c4c4; }
 
-@media screen and (min-width: 785px) {
+@media screen and (min-width: 767px) {
   body header .logo {
     float: left;
     margin-top: 20px;
@@ -259,7 +328,7 @@ body {
       height: auto;
       width: auto;
       float: right;
-      margin: 45px 0 0 0; }
+      margin: 45px 20px 0 0; }
       body header nav .menu li {
         display: inline-block; }
         body header nav .menu li a {
@@ -299,7 +368,24 @@ body {
   body main .download .stores a {
     width: 218px; }
   body main .download .social a {
-    font-size: 3.75em; } }
+    font-size: 3.75em; }
+  body main .post-1 .post-content .post-img-phone {
+    float: left;
+    margin-right: 40px; }
+  body main .post-1 .post-content .post-text {
+    width: 100%;
+    margin-right: 0;
+    margin-left: 0;
+    margin-bottom: 90px;
+    min-width: 290px; }
+  body main .post-1 .post-content .read-more {
+    float: left;
+    margin-left: 0; }
+  body main .post-3 .post-content .post-img-phone {
+    float: right;
+    margin-right: 20px;
+    margin-left: 40px;
+    margin-top: 30px; } }
 
 @media screen and (min-width: 1170px) {
   body {
