@@ -341,6 +341,22 @@ body main .opened-post {
     border-bottom: 2px dotted #444;
     padding-bottom: 30px; }
 
+body main .comments-block {
+  text-align: center; }
+  body main .comments-block img,
+  body main .comments-block form {
+    display: inline-block; }
+  body main .comments-block img {
+    vertical-align: top; }
+  body main .comments-block form {
+    width: 70%;
+    min-width: 200px; }
+    body main .comments-block form textarea {
+      resize: horizontal;
+      width: 100%;
+      border: 2px solid #39bfeb;
+      box-shadow: 0 0 10px 1px #666, inset 0 0 10px 1px #666; }
+
 @media screen and (min-width: 767px) {
   body header .logo {
     float: left;
